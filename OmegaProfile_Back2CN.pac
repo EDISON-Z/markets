@@ -16,7 +16,6 @@
         if (/(?:^|\.)bilibili\.com$/.test(host)) return "+C";
         if (/(?:^|\.)126\.net$/.test(host)) return "+C";
         if (/(?:^|\.)163\.com$/.test(host)) return "+C";
-        if (/(?:^|\.)cn$/.test(host)) return "+C";
         return "DIRECT";
     },
     "+C": function(url, host, scheme) {
