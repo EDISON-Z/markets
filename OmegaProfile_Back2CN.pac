@@ -16,12 +16,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/^ipservice\.163\.com$/.test(host)) return "+Proxy";
         if (/(?:^|\.)hdslb\.com$/.test(host)) return "+Proxy";
         if (/(?:^|\.)bilibili\.com$/.test(host)) return "+Proxy";
-        return "+Block";
-    },
-    "+Block": function(url, host, scheme) {
-        "use strict";
-        if (/^127\.0\.0\.1$/.test(host) || /^::1$/.test(host) || /^localhost$/.test(host)) return "DIRECT";
-        return "PROXY example.com:80";
+        return "+Proxy";
     },
     "+Proxy": function(url, host, scheme) {
         "use strict";
